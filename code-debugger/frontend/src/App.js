@@ -13,7 +13,8 @@ function App() {
     const handleSubmit = async () => {
       setDebugOutput('Running...');
       try {
-          const response = await axios.post('http://localhost:5000/debug', { code });
+          // const response = await axios.post('http://localhost:5000/debug', { code });
+          const response = await axios.post('https://principle-of-programming-language-code.onrender.com/debug', { code });
           setDebugOutput(response.data.result);
       } catch (error) {
           console.error('Error debugging code:', error);
